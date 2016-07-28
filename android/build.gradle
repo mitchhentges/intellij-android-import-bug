@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+    }
+}
+
+android {
+    buildToolsVersion '23.0.3'
+    compileSdkVersion 21
+
+    defaultConfig {
+        applicationId "ca.stti.test"
+        minSdkVersion 12
+    }
+}
+
+dependencies {
+    compile project(':core')
+}
