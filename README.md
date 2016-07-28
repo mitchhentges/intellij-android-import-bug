@@ -3,15 +3,17 @@
 ## The bug
 
 When a **pure Java** subproject (hereby called "core") is in the same base project as an **Android** subproject
-(hereby called "android"), "core" will be imported into IntelliJ as "Android-Gradle".
+(hereby called "android"), "core" will be imported into IntelliJ as "Android-Gradle" and "Java-Gradle".
+Pure Java projects should **_only_ be imported as "Java-Gradle"**
 
 ![Screenshot](android-gradle-screenshot.png)
 
 ## The repercussions
 
-* **"core"-only builds can take over 10x longer than they need to, because they do irrelevant android-related processing**[1]
-** This is incredibly relevant if most of the project is in pure-Java, and unit tests need to be run frequently
-* The project still builds, it just takes longer
+* "core"-only builds can take over **10x** longer than they need to, because they do irrelevant android-related processing[1].
+This is incredibly relevant if most of the project is in pure-Java, and unit tests need to be run frequently
+
+[1] By removing the "Android-Gradle" row from "Modules", "core" build times went from 12s to 1.5s for the business app I'm developing
 
 ## How to reproduce
 
