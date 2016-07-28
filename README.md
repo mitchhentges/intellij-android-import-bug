@@ -31,4 +31,4 @@ This is incredibly relevant if most of the project is in pure-Java, and unit tes
 
 ## Video
 
-[Two minute demonstration](Video.webm)
+[Two minute demonstration](https://raw.githubusercontent.com/mitchhentges/intellij-android-import-bug/master/Video.webm)
