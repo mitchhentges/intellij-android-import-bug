@@ -18,10 +18,6 @@ android {
         applicationId "ca.stti.test"
         minSdkVersion 12
     }
-
-    dexOptions {
-        preDexLibraries false
-    }
 }
 
 dependencies {
